@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+
+:root {
+    --bg-dark:      #0b0f1a;
+    --bg-card:      #111827;
+    --bg-card2:     #1a2235;
+    --border:       rgba(255,255,255,0.07);
+    --text:         #e8edf5;
+    --muted:        #7a8ba0;
+    --accent:       #38bdf8;   
+    --accent2:      #0ea5e9;
+    --gold:         #fbbf24;
+    --highlight:    #38bdf8;
+    --nav-h:        68px;
+    --radius-sm:    8px;
+    --radius-md:    14px;
+    --radius-lg:    20px;
+    --font-body:    'Outfit', sans-serif;
+    --font-mono:    'JetBrains Mono', monospace;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 40% at 10% 0%, rgba(56,189,248,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 35% at 90% 90%, rgba(251,191,36,.05) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+main { position: relative; z-index: 1; flex: 1; }
+
+
+h1, h2, h3, h4 {
+    font-family: var(--font-body);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); color: var(--accent); margin-bottom: 1rem; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+p  { color: var(--muted); line-height: 1.75; font-size: .93rem; }
+em { font-style: normal; color: var(--accent); font-weight: 600; }
+strong { color: var(--text); }
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color .2s;
+}
+a:hover { color: var(--gold); }
+
+.mono { font-family: var(--font-mono); font-size: .82rem; color: var(--accent); }

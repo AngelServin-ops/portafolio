@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto — Angel Eduardo Servin de la mora Vazquez">
+    <title>Contacto — Angel Servin</title>
+    <link rel="icon" type="image/png" href="../images/fate.jpg">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <a class="logo" href="index.html">
+            <span style="font-family:var(--font-mono);font-size:1.1rem;font-weight:700;color:var(--accent);letter-spacing:-.03em;">AS/</span>
+        </a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span><span></span><span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre mí</a></li>
+            <li><a href="work.html">Proyectos</a></li>
+            <li><a href="writting.html">Publicaciones</a></li>
+            <li><a href="contact.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="page-wrapper">
+
+            <section class="fade-up" style="margin-bottom:2.5rem;">
+                <p class="section-label">Hablemos</p>
+                <h2>Formulario de Contacto</h2>
+                <p style="max-width:480px;">¿Tienes un proyecto en mente o quieres colaborar? Llena el formulario y me pondré en contacto contigo.</p>
+            </section>
+
+            <section class="fade-up d2">
+                <div class="form-card">
+                    <form action="https://mibackend.com/contacto" method="post" class="form-grid">
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Angel Eduardo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email"
+                                   placeholder="Ej. angel@gmail.com"
+                                   required
+                                   pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                   placeholder="10 dígitos"
+                                   required
+                                   pattern="[0-9]{10}">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edad">Edad</label>
+                                <input type="number" id="edad" name="edad" min="1" max="120" placeholder="25">
+                            </div>
+                            <div class="form-group">
+                                <label for="fecha">Fecha</label>
+                                <input type="date" id="fecha" name="fecha">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivo">Motivo de contacto</label>
+                            <select name="motivo" id="motivo">
+                                <option value="">Selecciona una opción</option>
+                                <option value="Trabajo">Trabajo</option>
+                                <option value="Asesoria">Asesoría</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>¿Cómo prefieres que te contacten?</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="medio_contacto" value="correo">
+                                    Correo
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="medio_contacto" value="whatsapp">
+                                    WhatsApp
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Enviar mensaje →</button>
+                            <button type="reset" class="btn btn-outline">Limpiar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <span>&copy; 2026 Angel Eduardo Servin de la mora Vazquez</span>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/angel_servin_7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
